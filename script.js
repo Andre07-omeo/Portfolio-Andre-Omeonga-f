@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     // --- 1. Définition des Chemins des Photos de Projets ---
-    // ATTENTION : Tous les chemins sont préfixés par 'images/' pour correspondre à votre structure de dossiers
     const projectImages = {
         // Projet 1 : App de Géolocalisation (1.png, 1.2.jpg à 1.9.jpg)
         'slider-p1': [
@@ -21,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 2. Fonction de Défilement (Slider) Automatique des Images ---
     function createSlider(sliderId, images) {
         const slider = document.getElementById(sliderId);
-        if (!slider) return;
+        if (!slider || images.length === 0) return; // Sécurité si le slider est vide ou introuvable
 
         // Effacer le contenu initial et construire le slider avec les images
         slider.innerHTML = ''; 
@@ -38,21 +37,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const imageElements = slider.querySelectorAll('img');
         let currentIndex = 0;
-        const intervalTime = 3000; // Défilement toutes les 3 secondes, comme demandé
+        const intervalTime = 3000; // Défilement toutes les 3 secondes
 
         const nextImage = () => {
             // Cacher l'image actuelle
-            imageElements[currentIndex].classList.remove('active');
-            
+            if (imageElements[currentIndex]) {
+                 imageElements[currentIndex].classList.remove('active');
+            }
+           
             // Calculer l'index suivant (boucle pour revenir à zéro)
             currentIndex = (currentIndex + 1) % imageElements.length;
             
             // Afficher la nouvelle image
-            imageElements[currentIndex].classList.add('active');
-            
-            // NOTE: Le mouvement aléatoire sur les coins n'est pas standard en CSS/JS pur 
-            // pour un simple slider, mais la fonctionnalité de défilement est implémentée ici. 
-            // Les transitions sont gérées par le CSS.
+            if (imageElements[currentIndex]) {
+                 imageElements[currentIndex].classList.add('active');
+            }
+           
         };
 
         // Démarrer l'intervalle pour le défilement automatique
@@ -108,47 +108,62 @@ document.addEventListener('DOMContentLoaded', () => {
         appearOnScroll.observe(fader);
     });
     
-    // --- 7. Gestion des boutons "Laisser un avis" et Formspree ---
+    // --- 7. Gestion des boutons "Laisser un avis" et Formspree (CORRIGÉ) ---
     const reviewButtons = document.querySelectorAll('.leave-review');
     const contactSection = document.getElementById('contact');
-    const subjectInput = document.getElementById('subject');
     const messageTextarea = document.getElementById('message');
     const contactForm = document.querySelector('.contact-form');
-    const formStatus = document.getElementById('form-status');
+    // Cible le champ caché _subject (ATTENTION : name est utilisé, pas id)
+    const subjectInput = contactForm ? contactForm.querySelector('input[name="_subject"]') : null; 
+    // Cible le statut de formulaire (Nous allons devoir l'ajouter dans le HTML !)
+    const formStatus = document.getElementById('form-status'); 
 
     reviewButtons.forEach(button => {
         button.addEventListener('click', () => {
             const projectName = button.getAttribute('data-project');
             contactSection.scrollIntoView({ behavior: 'smooth' });
-            // Prépare le sujet et le placeholder pour l'avis
-            subjectInput.value = `Avis sur le projet : ${projectName}`;
+            
+            // Modifie le champ caché _subject
+            if (subjectInput) {
+                subjectInput.value = `Avis sur le projet : ${projectName}`;
+            }
+            
             messageTextarea.focus();
             messageTextarea.placeholder = `J'aimerais vous donner mon avis sur le projet "${projectName}"...`;
         });
     });
 
-    if (contactForm) {
+    if (contactForm && formStatus) { // Vérifie que les deux éléments existent
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             formStatus.textContent = 'Envoi en cours...';
             formStatus.style.color = 'var(--accent-color)'; 
+            formStatus.style.display = 'block'; // S'assurer qu'il est visible
+
             const formData = new FormData(contactForm);
             
             try {
-                // L'action du formulaire est définie dans index.html pour Formspree
+                // Utilise la fonction fetch() pour envoyer les données au lieu de la soumission HTML
                 const response = await fetch(contactForm.action, {
-                    method: contactForm.method, body: formData, headers: { 'Accept': 'application/json' }
+                    method: contactForm.method, 
+                    body: formData, 
+                    headers: { 'Accept': 'application/json' }
                 });
 
                 if (response.ok) {
                     formStatus.textContent = 'Message envoyé ! Merci pour votre avis/proposition.';
                     formStatus.style.color = '#3CB371'; // Vert succès
                     contactForm.reset(); 
-                    subjectInput.value = 'Nouveau message portfolio'; 
+                    // Réinitialisation du champ _subject et du placeholder
+                    if (subjectInput) {
+                         subjectInput.value = 'Nouveau message portfolio de André Omeonga';
+                    }
                     messageTextarea.placeholder = 'Votre avis ou proposition ici...';
                 } else {
+                    // Tente de récupérer les erreurs spécifiques de Formspree
                     const data = await response.json();
-                    formStatus.textContent = data["errors"] ? data["errors"].map(error => error["message"]).join(", ") : "Oops ! Erreur lors de l'envoi du formulaire.";
+                    const errorMessage = data["errors"] ? data["errors"].map(error => error["message"]).join(", ") : "Oops ! Erreur lors de l'envoi du formulaire.";
+                    formStatus.textContent = errorMessage;
                     formStatus.style.color = '#FF6347'; // Rouge erreur
                 }
             } catch (error) {
