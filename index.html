@@ -174,31 +174,22 @@
         </section>
 
         <section id="contact" class="contact-section">
-            <div class="container">
-                <h2 class="section-title anim-slide-up">Me Contacter</h2>
-                <p class="contact-intro anim-slide-up anim-delay-1">
-                    J'apprécie vos propositions de collaboration ou vos avis constructifs sur mes projets.
-                </p>
-                 <form action="https://formspree.io/f/xwkrpoyn" method="POST" class="contact-form anim-slide-up anim-delay-2">
-                    <div class="form-group">
-                        <label for="name">Votre Nom :</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Votre Email :</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <input type="hidden" name="_subject" value="Nouveau message portfolio de André Omeonga">
-                    <input type="hidden" name="_next" value="https://portfolio-andre-omeonga-f.vercel.app/#contact?success=true" />
+    <div class="container">
+        <h2 class="section-title anim-slide-up">Me Contacter</h2>
+        <p class="contact-intro anim-slide-up anim-delay-1">
+            J'apprécie vos propositions de collaboration ou vos avis constructifs sur mes projets.
+        </p>
 
-                    <div class="form-group">
-                        <label for="message">Message ou Avis :</label>
-                        <textarea id="message" name="message" rows="6" required placeholder="Votre avis ou proposition ici..."></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary">Envoyer le message</button>
-                </form>
+        <div id="form-status" style="margin-bottom: 15px; text-align: center; font-weight: bold; display: none;"></div>
+        <form action="https://formspree.io/f/VOTRE_ID_REEL" method="POST" class="contact-form anim-slide-up anim-delay-2">
+            <div class="form-group">
+                <label for="name">Votre Nom :</label>
+                <input type="text" id="name" name="name" required>
             </div>
-        </section>
+            <button type="submit" class="btn-primary">Envoyer le message</button>
+        </form>
+    </div>
+</section>
     </main>
 
     <footer class="footer">
