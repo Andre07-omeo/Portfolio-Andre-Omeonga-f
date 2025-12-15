@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>André Omeonga - Développeur Mobile Flutter</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="background-overlay"></div>
+
+    <header class="header">
+        <nav class="navbar" role="navigation" aria-label="Menu principal">
+            <a href="#hero" class="logo">A0F</a> 
+            <div class="nav-links">
+                <a href="#about" class="nav-item anim-link">À Propos</a>
+                <a href="#skills" class="nav-item anim-link">Compétences</a>
+                <a href="#projects" class="nav-item anim-link">Projets</a>
+                <a href="#contact" class="nav-item anim-link">Contact</a>
+            </div>
+            <button class="burger" id="burger-menu" aria-label="Ouvrir le menu de navigation">
+                <div class="line1">hgfgdfyttr</div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section id="hero" class="hero-section">
+            <div class="hero-content container">
+                <p class="greeting anim-fade-in anim-delay-1">Bonjour, je suis</p>
+                <h1 class="name anim-slide-up anim-delay-2">André Omeonga.</h1>
+                <h2 class="title anim-slide-up anim-delay-3">Concepteur d'applications mobiles élégantes avec Flutter.</h2>
+                <p class="description anim-slide-up anim-delay-4">
+                    Étudiant diplômé en Mathématiques Statistiques et Informatique (UNIKIN) et développeur personnel, je résous des problèmes réels avec des solutions mobiles performantes.
+                </p>
+                <a href="#projects" class="btn-primary anim-slide-up anim-delay-5">Découvrir mes Projets</a>
+            </div>
+        </section>
+
+        <section id="about" class="about-section container">
+            <h2 class="section-title anim-slide-up">À Propos de moi</h2>
+            <div class="about-grid">
+                <div class="about-text anim-slide-up anim-delay-1">
+                    <p>Salut ! Je m'appelle André Omeonga. Mon parcours à l'Université de Kinshasa (UNIKIN) m'a permis d'acquérir une solide base en Mathématiques, Statistiques et Informatique, que j'applique aujourd'hui au développement mobile.</p>
+                    <p>Ma passion se concentre sur **Flutter** (Dart), me permettant de concevoir des applications robustes et esthétiques pour Android. Mon objectif est de transformer les idées complexes en outils pratiques, conviviaux et efficaces pour la population.</p>
+                    
+                    <p class="contact-mini">Contactez-moi directement :</p>
+                    <ul>
+                        <li><i class="fas fa-envelope icon-accent"></i> Email: <a href="mailto:omeongaandre2@gmail.com">omeongaandre2@gmail.com</a></li>
+                        <li><i class="fab fa-whatsapp icon-accent"></i> WhatsApp: <a href="https://wa.me/243815023699">+243 815 023 699</a></li>
+                        <li><i class="fas fa-phone-alt icon-accent"></i> Tél: +243 851 553 869 / +243 815 023 699</li>
+                    </ul>
+                </div>
+                <figure class="about-image anim-fade-in anim-delay-3">
+                    <img src="images/profile1.JPG" alt="Photo de André Omeonga">
+                </figure>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section container">
+            <h2 class="section-title anim-slide-up">Compétences & Expérience</h2>
+            
+            <div class="skills-wrapper">
+                
+                <div class="skill-group anim-slide-up anim-delay-1">
+                    <h3><i class="fas fa-graduation-cap icon-accent"></i> Formation & Langues</h3>
+                    <ul>
+                        <li>Diplôme de licence 3 en *Mathématiques Statistiques et Informatique* (UNIKIN)</li>
+                        <li>Diplôme d’État</li>
+                        <li>Brevet en Entrepreneuriat</li>
+                    </ul>
+                    <h4>Langues :</h4>
+                    <ul>
+                        <li>Français (Très bien - Parler et Écrire)</li>
+                        <li>Lingala (Bien - Parler Écrire)</li>
+                        <li>Tetela (Très bien - Parler et Écrire)</li>
+                    </ul>
+                </div>
+
+                <div class="skill-group anim-slide-up anim-delay-2">
+                    <h3><i class="fas fa-briefcase icon-accent"></i> Expérience Professionnelle</h3>
+                    <ul>
+                        <li>Stage pratique à l'Université de Kinshasa / Sciences et Technologie / Math.Infos.</li>
+                        <li>Encadrement des étudiants en travaux pratiques d’informatique.</li>
+                        <li>Assistance aux enseignants dans l’organisation des séances de manipulation.</li>
+                        <li>Participation à la préparation des supports de cours en Mathématiques/Info.</li>
+                    </ul>
+                </div>
+
+                <div class="skill-group anim-slide-up anim-delay-3">
+                    <h3><i class="fas fa-code icon-accent"></i> Compétences Techniques</h3>
+                    <ul>
+                        <li>Programmation *Mobile (Flutter/Dart)*</li>
+                        <li>Programmation *Java Desktop*</li>
+                        <li>Outils bureautiques : Word, Excel, PowerPoint</li>
+                        <li>Utilisation professionnelle de *Latex*</li>
+                        <li>Entrepreneuriat et gestion de projets</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section container">
+            <h2 class="section-title anim-slide-up">Mes Projets de Développement Mobile (Flutter)</h2>
+            
+            <article class="project-card project-left anim-slide-up anim-delay-1">
+                
+                <div class="project-media project-slider" id="slider-p1">
+                    </div>
+
+                <div class="project-info">
+                    <h3>1. App Mobile de Géolocalisation d'Urgence</h3>
+                    <p class="technologies"><i class="fab fa-flutter"></i> Flutter | Dart | Géolocalisation | OpenStreepMap</p>
+                    
+                    <h4><i class="fas fa-bullseye"></i> Objectif & Problématique :</h4>
+                    <p>L'application est conçue pour résoudre le problème critique de l'orientation rapide vers les services d'urgence ou les lieux vitaux (hôpitaux, postes de police, administrations) en milieu urbain, souvent complexe et source de perte de temps.</p>
+                    
+                    <h4><i class="fas fa-handshake"></i> Intérêt Social :</h4>
+                    <p>Cet outil est une aide vitale en cas de situation d'urgence (médicale ou sécuritaire). Il garantit un accès plus rapide aux services publics essentiels, contribuant ainsi à l'amélioration de la sécurité et du bien-être de la population ciblée.</p>
+                    
+                    <a href="URL_DU_GIT_PROJET_1" target="_blank" class="btn-secondary">Code Source <i class="fab fa-github"></i></a>
+                    <button class="btn-tertiary leave-review" data-project="Géolocalisation d'Urgence">Laisser un avis</button>
+                </div>
+            </article>
+
+            <article class="project-card project-right anim-slide-up anim-delay-2">
+                
+                <div class="project-info">
+                    <h3>2. App de Calcul Mathématique (Stat, Prob, Compta, Analyse)</h3>
+                    <p class="technologies"><i class="fab fa-flutter"></i> Flutter | Dart | Algorithmes de Calcul</p>
+                    
+                    <h4><i class="fas fa-bullseye"></i> Objectif & Problématique :</h4>
+                    <p>Fournir aux étudiants universitaires et aux professionnels un calculateur spécialisé fiable pour effectuer des calculs complexes et fréquents dans les domaines de la Statistique, des Probabilités, de la Comptabilité et de l'Analyse Mathématique, réduisant ainsi le risque d'erreurs manuelles.</p>
+                    
+                    <h4><i class="fas fa-handshake"></i> Intérêt Social :</h4>
+                    <p>Soutien pédagogique puissant qui améliore l'efficacité des études et du travail professionnel. Démocratise l'accès à des outils de calcul précis et sophistiqués, essentiels dans les filières techniques.</p>
+                    
+                    <a href="URL_DU_GIT_PROJET_2" target="_blank" class="btn-secondary">Code Source <i class="fab fa-github"></i></a>
+                    <button class="btn-tertiary leave-review" data-project="Calcul Mathématique Pro">Laisser un avis</button>
+                </div>
+
+                <div class="project-media project-slider" id="slider-p2">
+                    </div>
+            </article>
+
+            <article class="project-card project-left anim-slide-up anim-delay-3">
+                
+                <div class="project-media project-slider" id="slider-p3">
+                    </div>
+                
+                <div class="project-info">
+                    <h3>3. App Éducative de Mathématiques</h3>
+                    <p class="technologies"><i class="fab fa-flutter"></i> Flutter | Dart | Éducation | Exercices Interactifs</p>
+                    
+                    <h4><i class="fas fa-bullseye"></i> Objectif & Problématique :</h4>
+                    <p>Rendre l'apprentissage des mathématiques complet et engageant pour les élèves du primaire et du secondaire. L'application résout le manque d'interactivité en fournissant des exercices corrigés directement par l'application, assurant un retour immédiat sur les erreurs.</p>
+                    
+                    <h4><i class="fas fa-handshake"></i> Intérêt Social :</h4>
+                    <p>Améliore la qualité et l'accessibilité de l'éducation en RDC. Le format ludique favorise la motivation et l'acquisition des bases scientifiques dès le plus jeune âge, préparant mieux les élèves aux études supérieures.</p>
+                    
+                    <a href="URL_DU_GIT_PROJET_3" target="_blank" class="btn-secondary">Code Source <i class="fab fa-github"></i></a>
+                    <button class="btn-tertiary leave-review" data-project="App Éducative Math">Laisser un avis</button>
+                </div>
+            </article>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title anim-slide-up">Me Contacter</h2>
+                <p class="contact-intro anim-slide-up anim-delay-1">
+                    J'apprécie vos propositions de collaboration ou vos avis constructifs sur mes projets.
+                </p>
+                <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="contact-form anim-slide-up anim-delay-2">
+                    <div class="form-group">
+                        <label for="name">Votre Nom :</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Votre Email :</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group" style="display: none;">
+                        <label for="subject">Objet :</label>
+                        <input type="text" id="subject" name="_subject" value="Nouveau message portfolio">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message ou Avis :</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Votre avis ou proposition ici..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Envoyer le message</button>
+                    <p id="form-status" class="form-status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 André Omeonga. Tous droits réservés.</p>
+            <div class="footer-social">
+                <a href="https://github.com/votre_profil" target="_blank" aria-label="Profil GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/votre_profil" target="_blank" aria-label="Profil LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://wa.me/243815023699" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
