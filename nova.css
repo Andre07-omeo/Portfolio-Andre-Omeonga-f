@@ -1,0 +1,375 @@
+/* --- 1. GLOBAL RESET AND THEME (Haut Contraste) --- */
+:root {
+    --color-dark-primary: #0A0A0A; /* Noir très profond */
+    --color-section-dark: #1C1C1E; /* Gris foncé pour sections contrastées */
+    --color-light-primary: #FFFFFF; /* Blanc pour le fond des sections claires */
+    --color-text-dark: #333333; /* Texte sombre sur fond clair */
+    --color-text-light: #E0E0E0; /* Texte clair sur fond sombre */
+    --color-accent-blue: #0077FF; /* Bleu électrique pour l'Action */
+    --color-accent-light: #2DD4BF; /* Cyan pour l'Accentuation/Titres */
+    --color-warning: #ffc107; /* Jaune pour l'Urgence */
+    --font-primary: 'Inter', sans-serif;
+    --max-width: 1200px;
+    --spacing-large: 100px; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.mixed-theme {
+    font-family: var(--font-primary);
+    background-color: var(--color-light-primary); /* Corps en Blanc */
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Couleurs des Sections */
+.light-bg { background-color: var(--color-light-primary); color: var(--color-text-dark); }
+.dark-bg-cards { background-color: #F0F0F0; color: var(--color-text-dark); } /* Gris très clair pour contraste */
+.dark-bg-form, .footer, .hero { background-color: var(--color-dark-primary); color: var(--color-text-light); } 
+
+/* --- 2. TYPOGRAPHIE ET TITRES --- */
+h1, h2, h3, h4 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Ajustements pour les fonds clairs */
+.light-bg h2, .light-bg h3, .light-bg h4 { color: var(--color-text-dark); }
+.dark-bg-cards h2, .dark-bg-cards h3, .dark-bg-cards h4 { color: var(--color-text-dark); } 
+
+/* Titres pour fonds sombres (Hero, Footer) */
+.hero h1, .hero h2, .hero h3, .hero h4, .dark-bg-form h2, .dark-bg-form h3, .footer p {
+    color: var(--color-text-light);
+}
+
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.2rem; }
+
+h2.section-title {
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+h2.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-accent-blue);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+a {
+    color: var(--color-accent-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: var(--color-accent-light);
+}
+
+.subtitle-text {
+    text-align: center;
+    font-size: 1.15rem;
+    margin-bottom: 60px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--color-text-dark); /* Par défaut pour fond clair */
+}
+.hero .subtitle-text, .dark-bg-form .subtitle-text {
+    color: rgba(255, 255, 255, 0.85);
+}
+.emphasis-text {
+    font-weight: 600;
+    color: var(--color-accent-blue);
+}
+
+/* --- 3. BOUTONS (CTA) --- */
+.main-cta-button {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: var(--color-accent-blue);
+    color: var(--color-light-primary);
+    font-weight: 700;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+}
+.main-cta-button:hover {
+    background-color: var(--color-accent-light);
+    transform: translateY(-3px);
+}
+.huge-cta { font-size: 1.1rem; }
+.cta-button {
+    background-color: var(--color-accent-light); /* Changement de couleur pour le bouton de navigation */
+    color: var(--color-dark-primary) !important;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+.navbar.sticky .cta-button {
+    background-color: var(--color-accent-light); /* Maintenir sur fond sombre sticky */
+}
+
+/* --- 4. NAVIGATION ET HEADER --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    position: relative;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+.navbar.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(10, 10, 10, 0.98);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.6);
+    animation: slideDown 0.5s ease-out;
+}
+@keyframes slideDown {
+    from { top: -80px; }
+    to { top: 0; }
+}
+
+.nav-links { list-style: none; display: flex; }
+.nav-links li { margin-left: 35px; }
+.nav-links a { color: var(--color-text-light); font-weight: 500; font-size: 0.95rem; }
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.background-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: url('images/fond.jpg') no-repeat center center/cover; 
+    z-index: 1;
+}
+.background-overlay::before {
+    content: '';
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Surcouche sombre forte */
+}
+.hero-content {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    max-width: 1000px;
+    padding-top: 50px;
+}
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 50px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* --- 5. SECTIONS GENERALES ET MODULARITÉ --- */
+.section {
+    padding: var(--spacing-large) 0;
+    position: relative;
+}
+
+/* VISION / PILIERS (light-bg) */
+.two-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 60px;
+}
+.text-block h3 { color: var(--color-accent-blue); margin-bottom: 20px; }
+.pillar-card {
+    background-color: #F8F8F8; /* Très léger gris pour la carte */
+    padding: 20px;
+    border-left: 4px solid var(--color-accent-light);
+    border-radius: 6px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+.pillar-card h4 { margin-bottom: 5px; color: var(--color-text-dark); }
+
+.pull-quote {
+    background-color: #E8F5FF; /* Bleu très léger pour la citation */
+    border-left: 5px solid var(--color-accent-blue);
+    padding: 30px;
+    margin-top: 80px;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--color-text-dark);
+    border-radius: 0 10px 10px 0;
+}
+
+/* SOLUTIONS (dark-bg-cards) */
+.solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+.solution-card {
+    background-color: var(--color-light-primary); /* Cartes blanches sur fond gris clair */
+    padding: 40px;
+    border-radius: 10px;
+    border-top: 4px solid var(--color-accent-blue);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.solution-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+.solution-card h3 { color: var(--color-accent-blue); margin-bottom: 15px; }
+
+.status-tag {
+    display: inline-block;
+    background-color: var(--color-accent-light);
+    color: var(--color-dark-primary);
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.status-tag.advanced {
+    background-color: var(--color-accent-blue);
+    color: var(--color-light-primary);
+}
+
+.funding-need {
+    color: var(--color-warning);
+    font-style: italic;
+    font-weight: 500;
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+/* VIABILITÉ (light-bg) */
+.viabilite-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+.viabilite-card {
+    background-color: #F8F8F8;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid var(--color-accent-light);
+}
+.viabilite-card h3 { color: var(--color-accent-light); margin-bottom: 10px; }
+
+/* PARTENARIAT ET FORMULAIRE (dark-bg-form) */
+.final-cta-section {
+    text-align: center;
+    padding: 100px 0;
+}
+
+/* Liste des besoins */
+.needs-list {
+    max-width: 700px;
+    margin: 60px auto 80px;
+    text-align: left;
+    background-color: var(--color-section-dark);
+    padding: 35px;
+    border-radius: 10px;
+}
+.needs-list h3 { color: var(--color-accent-light); text-align: center; margin-bottom: 25px; }
+.needs-list ol { padding-left: 20px; color: var(--color-text-light); }
+.needs-list li { margin-bottom: 15px; font-size: 1.05rem; }
+.needs-list li strong { color: var(--color-accent-blue); }
+
+/* FORMULAIRE */
+.contact-form-container {
+    max-width: 650px;
+    margin: 50px auto 0;
+    padding: 40px;
+    background-color: var(--color-section-dark); 
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1); 
+}
+.contact-form-container h3 { color: var(--color-accent-light); }
+.contact-form-container p { color: rgba(224, 224, 224, 0.7); }
+
+.partner-form { display: flex; flex-direction: column; }
+.form-group { margin-bottom: 20px; }
+.form-group label { color: var(--color-text-light); }
+
+.partner-form input,
+.partner-form select,
+.partner-form textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #333; 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    color: var(--color-text-light);
+    font-size: 1rem;
+}
+.partner-form input:focus,
+.partner-form select:focus,
+.partner-form textarea:focus {
+    border-color: var(--color-accent-blue);
+    outline: none;
+}
+.partner-form .huge-cta { margin-top: 20px; align-self: center; }
+
+/* --- 6. FOOTER --- */
+.footer {
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer p { margin-bottom: 10px; color: rgba(224, 224, 224, 0.6); }
+
+/* --- 7. SCROLL REVEAL (JS Animation) --- */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- 8. MEDIA QUERIES (Responsivité) --- */
+@media (max-width: 900px) {
+    h1 { font-size: 2.5rem; }
+    .two-columns, .solutions-grid, .viabilite-grid { grid-template-columns: 1fr; }
+    .hero { height: 70vh; }
+    .navbar .nav-links { display: none; }
+    .solution-card, .viabilite-card, .pillar-card, .needs-list { margin-bottom: 30px; }
+}
