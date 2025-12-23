@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlinckSecours - Par Andre Omeonga</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --android-green: #3DDC84;
+            --emergency-red: #e74c3c;
+            --text-dark: #1e293b;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: var(--text-dark);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        /* Partie supérieure demandée : Logo + Texte sans fond noir */
+        .top-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .android-img {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 10px;
+        }
+
+        h1 { margin: 0; font-size: 26px; color: var(--text-dark); }
+        .dev-by { color: #64748b; font-size: 14px; margin-top: 5px; }
+
+        /* Sections de texte */
+        .info-card {
+            text-align: left;
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+        }
+
+        .section-title { color: var(--emergency-red); font-weight: 700; margin-bottom: 8px; display: block; }
+
+        .account-note {
+            background: #fff1f2;
+            border: 1px solid #fecdd3;
+            color: #9f1239;
+            padding: 15px;
+            border-radius: 12px;
+            font-weight: 600;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        /* Sécurité */
+        .security-steps {
+            text-align: left;
+            border: 1px solid #e2e8f0;
+            padding: 20px;
+            border-radius: 16px;
+            background: #ffffff;
+        }
+
+        .step { display: flex; margin-bottom: 12px; font-size: 14px; }
+        .step-num { 
+            background: var(--android-green); color: white; width: 22px; height: 22px; 
+            border-radius: 50%; display: flex; align-items: center; justify-content: center; 
+            margin-right: 12px; flex-shrink: 0; font-weight: bold; font-size: 12px;
+        }
+
+        /* Bouton */
+        .download-link {
+            display: block;
+            background: var(--android-green);
+            color: white;
+            text-decoration: none;
+            padding: 18px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 18px;
+            margin: 25px 0;
+            transition: 0.2s;
+        }
+
+        .download-link:hover { opacity: 0.9; transform: translateY(-2px); }
+
+        /* QR Code */
+        .qr-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #f1f5f9;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        #qrcode { margin-top: 15px; border: 1px solid #eee; padding: 5px; }
+
+        footer { font-size: 12px; color: #94a3b8; margin-top: 30px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="top-header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android" class="android-img">
+        <h1>FlinckSecours</h1>
+        <div class="dev-by">Développé par <strong>Andre Omeonga</strong></div>
+    </div>
+
+    <div class="info-card">
+        <span class="section-title">📍 Objectif & Problématique</span>
+        <p style="margin: 0; font-size: 15px;">L'application résout le problème critique de l'orientation rapide vers les services d'urgence et lieux vitaux (hôpitaux, police, administrations) en milieu urbain complexe.</p>
+        
+        <span class="section-title" style="margin-top: 15px;">🤝 Intérêt Social</span>
+        <p style="margin: 0; font-size: 15px;">Aide vitale en situation d'urgence, elle garantit un accès rapide aux services publics pour la sécurité et le bien-être de la population.</p>
+    </div>
+
+    <div class="account-note">
+        ⚠️ OBLIGATOIRE : La création d'un compte utilisateur est nécessaire dès l'ouverture pour accéder aux services.
+    </div>
+
+    <div class="info-card" style="background: #eff6ff;">
+        <span class="section-title" style="color: #2563eb;">🗺️ Mise à jour de la carte</span>
+        <p style="font-size: 14px;">Nous enregistrons les lieux petit à petit. Utilisez le menu <strong>"Nous contacter"</strong> pour suggérer des lieux. Des notifications vous préviendront des ajouts.</p>
+    </div>
+
+    <div class="security-steps">
+        <strong style="display:block; margin-bottom:10px;">🛡️ Guide d'installation</strong>
+        <div class="step"><div class="step-num">1</div><div>Cliquez sur "Télécharger quand même" lors de l'alerte navigateur.</div></div>
+        <div class="step"><div class="step-num">2</div><div>Activez les "Sources inconnues" dans les paramètres.</div></div>
+        <div class="step"><div class="step-num">3</div><div>Si Play Protect bloque, cliquez sur "Détails" puis "Installer quand même".</div></div>
+    </div>
+
+    <a href="votre-app.apk" class="download-link">Télécharger l'APK</a>
+
+    <div class="qr-section">
+        <p><strong>Si vous êtes sur ordinateur</strong>, scannez ce code avec votre téléphone pour télécharger directement l'application :</p>
+        <img src="" alt="QR Code" id="qrcode" width="150" height="150">
+    </div>
+
+    <footer>
+        &copy; 2025 NovaDigital-Congo (Andre Omeonga) - Service Public d'Orientation
+    </footer>
+</div>
+
+<script>
+    // Génération automatique du QR code basé sur l'adresse du site
+    window.onload = function() {
+        var currentUrl = window.location.href;
+        document.getElementById('qrcode').src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + encodeURIComponent(currentUrl);
+    };
+</script>
+
+</body>
+</html>
