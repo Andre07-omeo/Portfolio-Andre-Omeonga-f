@@ -149,7 +149,9 @@
         <div class="step"><div class="step-num">3</div><div>Si Play Protect bloque, cliquez sur "Détails" puis "Installer quand même".</div></div>
     </div>
 
-   <a href="images/application.apk" download class="download-link">Télécharger l'APK</a>
+  <a href="https://github.com/Andre07-omeo/Portfolio-Andre-Omeonga-f/releases/download/v1/application.apk" download class="download-link">
+        Télécharger l'application
+    </a>
 
     <div class="qr-section">
         <p><strong>Si vous êtes sur ordinateur</strong>, scannez ce code avec votre téléphone pour télécharger directement l'application :</p>
@@ -163,17 +165,15 @@
 
 <script>
     window.onload = function() {
-        // 1. On récupère l'adresse de base du site (ex: https://votre-site.github.io/projet/)
-        // On enlève le nom du fichier HTML à la fin de l'URL pour avoir le dossier racine
-        var baseUrl = window.location.href.substring(0, window.location.href.lastIndexOf("/") + 1);
+        // 1. Lien direct vers votre APK hébergé sur les serveurs de GitHub
+        var apkUrl = "https://github.com/Andre07-omeo/Portfolio-Andre-Omeonga-f/releases/download/v1/application.apk";
         
-        // 2. On crée le lien direct vers l'APK (Dossier images + nom du fichier)
-        var apkUrl = baseUrl + "images/application.apk";
-        
-        // 3. On génère le QR code qui pointe DIRECTEMENT vers le téléchargement de l'APK
+        // 2. On génère le QR code qui pointe DIRECTEMENT vers le téléchargement de l'APK
+        // Dès que l'utilisateur scanne, le téléchargement se lancera sur son téléphone.
         document.getElementById('qrcode').src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + encodeURIComponent(apkUrl);
     };
 </script>
 </body>
 
 </html>
+
