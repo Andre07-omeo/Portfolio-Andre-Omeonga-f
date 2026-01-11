@@ -31,7 +31,6 @@
             text-align: center;
         }
 
-        /* Partie supérieure demandée : Logo + Texte sans fond noir */
         .top-header {
             display: flex;
             flex-direction: column;
@@ -48,7 +47,6 @@
         h1 { margin: 0; font-size: 26px; color: var(--text-dark); }
         .dev-by { color: #64748b; font-size: 14px; margin-top: 5px; }
 
-        /* Sections de texte */
         .info-card {
             text-align: left;
             background: #f1f5f9;
@@ -70,7 +68,6 @@
             text-align: left;
         }
 
-        /* Sécurité */
         .security-steps {
             text-align: left;
             border: 1px solid #e2e8f0;
@@ -86,7 +83,6 @@
             margin-right: 12px; flex-shrink: 0; font-weight: bold; font-size: 12px;
         }
 
-        /* Bouton */
         .download-link {
             display: block;
             background: var(--android-green);
@@ -98,11 +94,13 @@
             font-size: 18px;
             margin: 25px 0;
             transition: 0.2s;
+            cursor: pointer;
+            border: none;
+            width: 100%;
         }
 
         .download-link:hover { opacity: 0.9; transform: translateY(-2px); }
 
-        /* QR Code */
         .qr-section {
             margin-top: 30px;
             padding-top: 20px;
@@ -149,9 +147,9 @@
         <div class="step"><div class="step-num">3</div><div>Si Play Protect bloque, cliquez sur "Détails" puis "Installer quand même".</div></div>
     </div>
 
-  <a href="https://github.com/Andre07-omeo/Portfolio-Andre-Omeonga-f/releases/download/v1/application.apk" download class="download-link">
+    <button class="download-link" onclick="suspendreTelechargement()">
         Télécharger l'application
-    </a>
+    </button>
 
     <div class="qr-section">
         <p><strong>Si vous êtes sur ordinateur</strong>, scannez ce code avec votre téléphone pour télécharger directement l'application :</p>
@@ -164,16 +162,14 @@
 </div>
 
 <script>
+    function suspendreTelechargement() {
+        alert("André Omeonga a suspendu le téléchargement");
+    }
+
     window.onload = function() {
-        // 1. Lien direct vers votre APK hébergé sur les serveurs de GitHub
         var apkUrl = "https://github.com/Andre07-omeo/Portfolio-Andre-Omeonga-f/releases/download/v1/application.apk";
-        
-        // 2. On génère le QR code qui pointe DIRECTEMENT vers le téléchargement de l'APK
-        // Dès que l'utilisateur scanne, le téléchargement se lancera sur son téléphone.
         document.getElementById('qrcode').src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + encodeURIComponent(apkUrl);
     };
 </script>
 </body>
-
 </html>
-
