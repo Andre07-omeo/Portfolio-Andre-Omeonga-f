@@ -1,272 +1,120 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>André Omeonga - Développeur Mobile Flutter & Visionnaire NovaDigital</title>
-    
-    <link rel="stylesheet" href="style.css">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071a37">
+  <meta name="description" content="Découvrez le portfolio d’André Omeonga : développeur d’applications et solutions numériques, engagé pour la transformation digitale en RDC avec Nova Digital Congo.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="André Omeonga — Développeur & créateur digital en RDC">
+  <meta property="og:description" content="Des idées locales, des solutions numériques utiles. Découvrez les projets et compétences d’André Omeonga et de Nova Digital Congo.">
+  <meta property="og:image" content="images/profile1.JPG">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>André Omeonga | Développeur & créateur digital en RDC</title>
+  <link rel="icon" href="images/nova-digital-icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme.css">
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Person","name":"André Omeonga","jobTitle":"Développeur d’applications","email":"omeongaandre2@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Kinshasa","addressCountry":"CD"},"sameAs":["https://github.com/Andre07-omeo"]}
+  </script>
 </head>
 <body>
-    
-    <div class="background-overlay"></div>
-    
-    <header class="header">
-        <nav class="navbar" role="navigation" aria-label="Menu principal">
-            <a href="#hero" class="logo">A0F</a> 
-            <div class="nav-links">
-                <a href="#about" class="nav-item anim-link">À Propos</a>
-                <a href="#skills" class="nav-item anim-link">Compétences</a>
-                <a href="#projects" class="nav-item anim-link">Projets</a>
-                <a href="#novadigital" class="nav-item anim-link nav-accent">NovaDigital</a> 
-                <a href="#contact" class="nav-item anim-link">Contact</a>
-            </div>
-            <button class="burger" id="burger-menu" aria-label="Ouvrir le menu de navigation">
-                <div class="line1"></div> 
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </button>
-        </nav>
-    </header>
+  <a class="skip-link" href="#main-content">Aller au contenu</a>
+  <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+      <a class="brand" href="#accueil" aria-label="André Omeonga, accueil">
+      <span class="brand-mark">AO<span>.</span></span><span class="brand-name">André Omeonga<small>Digital builder · Nova Digital</small></span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    <nav class="nav-links" id="nav-links">
+      <a href="#profil">Profil</a><a href="#competences">Compétences</a><a href="#realisations">Réalisations</a><a class="nav-company-link" href="nova.html"><img src="images/nova-digital-icon.svg" alt="" width="24" height="24"><span>Site Nova Digital</span></a>
+      <a class="nav-contact" href="#contact">Parlons de votre projet <span>↗</span></a>
+    </nav>
+  </header>
 
-    <main>
-        
-        <section id="hero" class="hero-section">
-            <div class="hero-content container">
-                <p class="greeting anim-fade-in anim-delay-1">Bonjour, je suis</p>
-                <h1 class="name anim-slide-up anim-delay-2">André Omeonga.</h1>
-                <h2 class="title anim-slide-up anim-delay-3">Concepteur d'applications mobiles élégantes avec Flutter.</h2>
-                <p class="description anim-slide-up anim-delay-4">
-                    Étudiant diplômé en Mathématiques Statistiques et Informatique (UNIKIN) et développeur personnel, je résous des problèmes réels avec des solutions mobiles performantes.
-                </p>
-                <a href="#projects" class="btn-primary anim-slide-up anim-delay-5">Découvrir mes Projets</a>
-            </div>
-        </section>
+  <main id="main-content">
+    <section class="hero section-wrap" id="accueil">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> Basé à Kinshasa · Disponible pour collaborer</div>
+        <h1>Des idées locales.<br><span class="gradient-text">Un impact digital.</span></h1>
+        <p class="hero-lead">Je suis André Omeonga, développeur et créateur de solutions numériques pensées pour répondre aux besoins réels en République démocratique du Congo.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#realisations">Explorer mes réalisations <span>↘</span></a><a class="text-link" href="https://wa.me/243815023699" target="_blank" rel="noreferrer">Me contacter sur WhatsApp <span>↗</span></a></div>
+        <div class="hero-stats"><div><strong id="hero-skill-count">09</strong><span>Compétences clés</span></div><i></i><div><strong>06</strong><span>Projets présentés</span></div><i></i><div><strong>RDC</strong><span>Impact local</span></div></div>
+      </div>
+      <div class="hero-visual">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="portrait-frame"><img src="images/profile1.JPG" alt="Portrait d'André Omeonga" onerror="this.style.display='none';this.parentElement.classList.add('portrait-fallback')"><span class="portrait-initials">AO</span></div>
+        <div class="float-card card-code"><span class="mini-icon">⌘</span><div><b>Construire</b><small>des solutions utiles</small></div></div>
+        <div class="float-card card-location"><span class="pin">⌖</span><div><b>Kinshasa, RDC</b><small>la tech au service du terrain</small></div></div>
+        <div class="visual-tag">NOVA<br><b>DIGITAL</b><span>CONGO ↗</span></div>
+      </div>
+      <a class="scroll-cue" href="#profil"><span></span> Défilez pour découvrir</a>
+    </section>
 
-        <section id="about" class="about-section container">
-            <h2 class="section-title anim-slide-up">À Propos de moi</h2>
-            <div class="about-grid">
-                <div class="about-text anim-slide-up anim-delay-1">
-                    <p>Salut ! Je m'appelle André Omeonga. Mon parcours à l'Université de Kinshasa (UNIKIN) m'a permis d'acquérir une solide base en Mathématiques, Statistiques et Informatique, que j'applique aujourd'hui au développement mobile.</p>
-                    <p>Ma passion se concentre sur Flutter (Dart), me permettant de concevoir des applications robustes et esthétiques pour Android. Mon objectif est de transformer les idées complexes en outils pratiques, conviviaux et efficaces pour la population.</p>
-                    
-                    <p class="contact-mini">Contactez-moi directement :</p>
-                    <ul>
-                        <li><i class="fas fa-envelope icon-accent"></i> Email: <a href="mailto:omeongaandre2@gmail.com">omeongaandre2@gmail.com</a></li>
-                        <li><i class="fab fa-whatsapp icon-accent"></i> WhatsApp: <a href="https://wa.me/243815023699">+243 815 023 699</a></li>
-                        <li><i class="fas fa-phone-alt icon-accent"></i> Tél: +243 851 553 869 / +243 815 023 699</li>
-                    </ul>
-                </div>
-                <figure class="about-image anim-fade-in anim-delay-3">
-                    <img src="images/profile1.JPG" alt="Photo de André Omeonga">
-                </figure>
-            </div>
-        </section>
+    <section class="section-wrap about-section" id="profil">
+      <div class="section-heading"><div><span class="section-kicker">01 — QUI JE SUIS</span><h2>La technologie, <span class="gradient-text">avec intention.</span></h2></div><p>Un parcours entre mathématiques, informatique et création de produits numériques adaptés à nos réalités.</p></div>
+      <div class="about-grid">
+        <article class="about-card about-story"><span class="big-quote">“</span><p>Diplômé en Mathématiques, Statistiques et Informatique à l’Université de Kinshasa, je transforme des problèmes concrets en outils numériques accessibles, utiles et bien conçus.</p><p>Du développement mobile à la gestion de solutions web, j’aime faire le lien entre une idée ambitieuse et un produit qui fonctionne.</p><a href="#contact" class="arrow-link">Échanger avec André <span>↗</span></a></article>
+        <article class="about-card about-facts"><h3>Mon parcours en bref</h3><div class="fact-row"><span class="fact-icon">◈</span><div><b>Formation</b><small>Licence 3 en Mathématiques, Statistiques & Informatique — UNIKIN</small></div></div><div class="fact-row"><span class="fact-icon">⌁</span><div><b>Expérience</b><small>Stage pratique et encadrement de travaux pratiques en informatique</small></div></div><div class="fact-row"><span class="fact-icon">◎</span><div><b>Langues</b><small>Français · Lingala · Tetela</small></div></div><div class="fact-row"><span class="fact-icon">✳</span><div><b>En complément</b><small>Brevet en entrepreneuriat · bureautique · LaTeX</small></div></div></article>
+      </div>
+    </section>
 
-        <section id="skills" class="skills-section container">
-            <h2 class="section-title anim-slide-up">Compétences & Expérience</h2>
-            
-            <div class="skills-wrapper">
-                
-                <div class="skill-group anim-slide-up anim-delay-1">
-                    <h3><i class="fas fa-graduation-cap icon-accent"></i> Formation & Langues</h3>
-                    <ul>
-                        <li>Diplôme de licence 3 en Mathématiques Statistiques et Informatique (UNIKIN)</li>
-                        <li>Diplôme d’État</li>
-                        <li>Brevet en Entrepreneuriat</li>
-                    </ul>
-                    <h4>Langues :</h4>
-                    <ul>
-                        <li>Français (Très bien - Parler et Écrire)</li>
-                        <li>Lingala (Bien - Parler Écrire)</li>
-                        <li>Tetela (Très bien - Parler et Écrire)</li>
-                    </ul>
-                </div>
+    <section class="section-wrap skills-section" id="competences">
+      <div class="section-heading"><div><span class="section-kicker">02 — SAVOIR-FAIRE</span><h2>Des compétences <span class="gradient-text">qui créent.</span></h2></div><p>Une boîte à outils qui évolue avec les projets et les besoins du terrain.</p></div>
+      <div class="skills-toolbar"><div class="filter-pills" id="filters" aria-label="Filtrer les compétences"></div><div class="skill-count" id="skill-count"></div></div>
+      <div class="skills-grid" id="skills-grid" aria-live="polite"></div>
+    </section>
 
-                <div class="skill-group anim-slide-up anim-delay-2">
-                    <h3><i class="fas fa-briefcase icon-accent"></i> Expérience Professionnelle</h3>
-                    <ul>
-                        <li>Stage pratique à l'Université de Kinshasa / Sciences et Technologie / Math.Infos.</li>
-                        <li>Encadrement des étudiants en travaux pratiques d’informatique.</li>
-                        <li>Assistance aux enseignants dans l’organisation des séances de manipulation.</li>
-                        <li>Participation à la préparation des supports de cours en Mathématiques/Info.</li>
-                    </ul>
-                </div>
+    <section class="section-wrap projects-section" id="realisations">
+      <div class="section-heading"><div><span class="section-kicker">03 — DU CONCRET</span><h2>Des projets <span class="gradient-text">en mouvement.</span></h2></div><p>Des outils pensés pour l’éducation, l’urgence, la gestion et la transformation numérique.</p></div>
+      <div class="projects-grid" id="projects-grid"></div>
+      <div class="projects-note"><span>✳</span><p>Vous avez un défi numérique à résoudre ? Construisons une solution qui vous ressemble.</p><a href="#contact">Parlons-en ↗</a></div>
+    </section>
 
-                <div class="skill-group anim-slide-up anim-delay-3">
-                    <h3><i class="fas fa-code icon-accent"></i> Compétences Techniques</h3>
-                    <ul>
-                        <li>Programmation Mobile (Flutter/Dart)</li>
-                        <li>Programmation Java Desktop</li>
-                        <li>SGBD Connaissance de Base</li>
-                        <li>Outils bureautiques : Word, Excel, PowerPoint</li>
-                        <li>Utilisation professionnelle de Latex</li>
-                        <li>Entrepreneuriat et gestion de projets</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="projects-section container">
-            <h2 class="section-title anim-slide-up">Mes Projets de Développement Mobile (Flutter)</h2>
-            
-            <article class="project-card project-left anim-slide-up anim-delay-1">
-                
-                <div class="project-media project-slider" id="slider-p1">
-                    </div>
-
-                <div class="project-info">
-                    <h3>1. App Mobile de Géolocalisation d'Urgence</h3>
-                    <p class="technologies"><i class="fab fa-flutter"></i> Flutter | Dart | Géolocalisation | OpenStreepMap</p>
-                    
-                    <h4><i class="fas fa-bullseye"></i> Objectif & Problématique :</h4>
-                    <p>L'application est conçue pour résoudre le problème critique de l'orientation rapide vers les services d'urgence ou les lieux vitaux (hôpitaux, postes de police, administrations) en milieu urbain, souvent complexe et source de perte de temps.</p>
-                    
-                    <h4><i class="fas fa-handshake"></i> Intérêt Social :</h4>
-                    <p>Cet outil est une aide vitale en cas de situation d'urgence (médicale ou sécuritaire). Il garantit un accès plus rapide aux services publics essentiels, contribuant ainsi à l'amélioration de la sécurité et du bien-être de la population ciblée.</p>
-                    
-                    <a href="flincksecours.html" target="_blank" class="btn-secondary">
-                        Télécharger l'application <i class="fab fa-android"></i>
-                    </a>                   
-                    <button class="btn-tertiary leave-review" data-project="Géolocalisation d'Urgence">Laisser un avis</button>
-                </div>
-            </article>
-
-            <article class="project-card project-right anim-slide-up anim-delay-2">
-                
-                <div class="project-info">
-                    <h3>2. App de Calcul Mathématique (Stat, Prob, Compta, Analyse)</h3>
-                    <p class="technologies"><i class="fab fa-flutter"></i> Flutter | Dart | Algorithmes de Calcul</p>
-                    
-                    <h4><i class="fas fa-bullseye"></i> Objectif & Problématique :</h4>
-                    <p>Fournir aux étudiants universitaires et aux professionnels un calculateur spécialisé fiable pour effectuer des calculs complexes et fréquents dans les domaines de la Statistique, des Probabilités, de la Comptabilité et de l'Analyse Mathématique, réduisant ainsi le risque d'erreurs manuelles.</p>
-                    
-                    <h4><i class="fas fa-handshake"></i> Intérêt Social :</h4>
-                    <p>Soutien pédagogique puissant qui améliore l'efficacité des études et du travail professionnel. Démocratise l'accès à des outils de calcul précis et sophistiqués, essentiels dans les filières techniques.</p>
-                    
-                    <a href="URL_DU_GIT_PROJET_2" target="_blank" class="btn-secondary">Code Source <i class="fab fa-github"></i></a>
-                    <button class="btn-tertiary leave-review" data-project="Calcul Mathématique Pro">Laisser un avis</button>
-                </div>
-
-                <div class="project-media project-slider" id="slider-p2">
-                    </div>
-            </article>
-
-            <article class="project-card project-left anim-slide-up anim-delay-3">
-                
-                <div class="project-media project-slider" id="slider-p3">
-                    </div>
-                
-                <div class="project-info">
-                    <h3>3. App Éducative de Mathématiques</h3>
-                    <p class="technologies"><i class="fab fa-flutter"></i> Flutter | Dart | Éducation | Exercices Interactifs</p>
-                    
-                    <h4><i class="fas fa-bullseye"></i> Objectif & Problématique :</h4>
-                    <p>Rendre l'apprentissage des mathématiques complet et engageant pour les élèves du primaire et du secondaire. L'application résout le manque d'interactivité en fournissant des exercices corrigés directement par l'application, assurant un retour immédiat sur les erreurs.</p>
-                    
-                    <h4><i class="fas fa-handshake"></i> Intérêt Social :</h4>
-                    <p>Améliore la qualité et l'accessibilité de l'éducation en RDC. Le format ludique favorise la motivation et l'acquisition des bases scientifiques dès le plus jeune âge, préparant mieux les élèves aux études supérieures.</p>
-                    
-                    <a href="URL_DU_GIT_PROJET_3" target="_blank" class="btn-secondary">Code Source <i class="fab fa-github"></i></a>
-                    <button class="btn-tertiary leave-review" data-project="App Éducative Math">Laisser un avis</button>
-                </div>
-            </article>
-        </section>
-
-        <section id="novadigital" class="novadigital-section container">
-            <h2 class="section-title anim-slide-up">NovaDigital Congo : Notre Ambition pour la RDC</h2>
-
-            <div class="novadigital-content">
-                <p class="intro-text anim-fade-in anim-delay-1">
-                    Je suis fier d'être partie prenante de NovaDigital Congo, une initiative dédiée à la transformation numérique et à la souveraineté technologique de la République Démocratique du Congo. Nous ne faisons pas que construire des applications ; nous bâtissons un écosystème durable.
-                </p>
-
-                <div class="mission-grid">
-                    
-                    <article class="mission-card anim-slide-up anim-delay-2">
-                        <h3><i class="fas fa-desktop icon-accent"></i> Pôle 1 : Solutions Locales</h3>
-                        <p>Développement de systèmes informatiques sophistiqués (comme l'application de Géolocalisation, application Éducative de Mathématiques ... que j'ai conçue) adaptés aux besoins réels et institutionnels du pays.</p>
-                        <ul class="realisations-list">
-                            <li><i class="fas fa-check-circle"></i> Géolocalisation d'Urgence (Opérationnel)</li>
-                            <li><i class="fas fa-check-circle"></i> Plateforme Nationale de Gestion Scolaire (En développement)</li>
-                        </ul>
-                    </article>
-
-                    <article class="mission-card anim-slide-up anim-delay-3">
-                        <h3><i class="fas fa-chalkboard-teacher icon-accent"></i> Pôle 2 : NovaDigital Academy</h3>
-                        <p>Engagement à former massivement la prochaine génération de professionnels congolais en programmation, IA et cybersécurité, assurant ainsi l'autonomie et la pérennité de la transformation digitale.</p>
-                        <p class="cta-vision">
-                            Notre ambition : Positionner la RDC comme un hub technologique régional d'ici 2030.
-                        </p>
-                    </article>
-
-                </div>
-
-                <div class="partenariat-cta anim-fade-in anim-delay-4">
-                    <h3 class="vision-title">Devenir Partenaire de la Vision</h3>
-                    <p>Nous recherchons des partenaires stratégiques qui partagent cette ambition de modernisation nationale. Votre soutien accélère l'impact social et économique sur le terrain.</p>
-                    <a href="#contact" class="btn-primary">Discuter de la Vision &rarr;</a>
-                    <a href="nova.html" class="main-cta-button">Visiter le Site du Projet &rarr;</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <h2 class="section-title anim-slide-up">Me Contacter</h2>
-                <p class="contact-intro anim-slide-up anim-delay-1">
-                    J'apprécie vos propositions de collaboration ou vos avis constructifs sur mes projets.
-                </p>
-
-                <div id="form-status" style="margin-bottom: 15px; text-align: center; font-weight: bold; display: none;"></div>
-                
-                <form action="https://formspree.io/f/mkgdajaz" method="POST" class="contact-form anim-slide-up anim-delay-2">
-                    <div class="form-group">
-                        <label for="name">Votre Nom :</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Votre Email :</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Votre Message / Proposition :</label>
-                        <textarea id="message" name="message" rows="6" required placeholder="Votre avis ou proposition ici..."></textarea>
-                    </div>
-
-                    <input type="hidden" name="_subject" value="Nouveau message portfolio de André Omeonga" />
-                    <input type="hidden" name="_next" value="URL_INUTILE_CAR_JS_GEREE" />
-
-                    <button type="submit" class="btn-primary">Envoyer le message</button>
-                </form>
-            </div>
-        </section>
-        
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 André Omeonga. Tous droits réservés. Propulsé par la vision NovaDigital.</p>
-            <div class="footer-social">
-                <a href="https://github.com/Andre07-omeo" target="_blank" aria-label="Profil GitHub"><i class="fab fa-github"></i></a>
-                <a href="URL_VOTRE_PROFIL_LINKEDIN" target="_blank" aria-label="Profil LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://wa.me/243815023699" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            </div>
+    <section class="nova-section" id="nova">
+      <div class="section-wrap nova-inner">
+        <div class="nova-copy"><span class="section-kicker light-kicker">04 — UNE VISION COLLECTIVE</span><div class="nova-lockup"><img class="nova-lockup-image" src="images/nova-digital-logo-inverse.svg" alt="Logo Nova Digital Congo" width="300" height="64"></div>
+          <h2>La RDC n’a pas à attendre<br>son <span>avenir numérique.</span></h2><p>Nova Digital Congo imagine et développe des outils numériques conçus pour les réalités congolaises : des solutions concrètes, une expertise locale et une nouvelle génération de talents.</p>
+          <a href="nova.html" class="button button-light">Découvrir le site Nova Digital <span>↗</span></a>
         </div>
-    </footer>
+        <div class="nova-pillars">
+          <article><span class="pillar-no">01 / BUILD</span><div class="pillar-icon">⌘</div><h3>Solutions utiles</h3><p>Applications, plateformes et outils de gestion qui simplifient le quotidien des organisations.</p></article>
+          <article><span class="pillar-no">02 / GROW</span><div class="pillar-icon">↗</div><h3>Talents locaux</h3><p>Partager les compétences et encourager une génération créative, autonome et connectée.</p></article>
+          <article><span class="pillar-no">03 / CONNECT</span><div class="pillar-icon">◎</div><h3>Impact durable</h3><p>Faire grandir un écosystème numérique inclusif, pensé depuis la RDC pour ses communautés.</p></article>
+        </div>
+      </div>
+      <div class="nova-bottom"><span>MADE WITH PURPOSE IN KINSHASA</span><span>TECHNOLOGIE · CRÉATIVITÉ · IMPACT</span><span>ND / 2026</span></div>
+    </section>
 
-    <script src="script.js"></script>
+    <section class="section-wrap contact-section" id="contact">
+      <div class="contact-card"><div><span class="section-kicker">05 — ON PASSE À L’ACTION ?</span><h2>Votre prochaine idée<br>commence <span class="gradient-text">ici.</span></h2><p>Pour une collaboration, un projet ou une conversation autour de Nova Digital, écrivez-moi directement.</p><div class="contact-links"><a href="mailto:omeongaandre2@gmail.com">omeongaandre2@gmail.com <span>↗</span></a><a href="https://wa.me/243815023699" target="_blank" rel="noreferrer">WhatsApp · +243 815 023 699 <span>↗</span></a></div></div><a class="contact-orb" href="mailto:omeongaandre2@gmail.com" aria-label="Envoyer un e-mail">↗</a></div>
+    </section>
+  </main>
+  <footer class="footer section-wrap"><a class="brand footer-brand" href="#accueil"><span class="brand-mark">AO<span>.</span></span><span class="brand-name">André Omeonga<small>Développeur · Nova Digital Congo</small></span></a><span>© <span id="year"></span> André Omeonga. Créé à Kinshasa.</span><div class="footer-actions"><a href="nova.html">Site Nova Digital ↗</a><a href="https://github.com/Andre07-omeo" target="_blank" rel="noreferrer" aria-label="GitHub d’André Omeonga">GitHub ↗</a><button class="share-button" id="share-site" type="button">Partager ↗</button><button class="admin-trigger" id="admin-trigger" title="Espace administrateur">⌘ Admin</button></div></footer>
+  <a class="floating-contact" href="https://wa.me/243815023699" target="_blank" rel="noreferrer" aria-label="Contacter André sur WhatsApp"><span>WA</span><b>Échangeons</b><i>↗</i></a>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog class="image-dialog" id="image-dialog" aria-label="Agrandissement de l’image du projet">
+    <div class="image-dialog-head"><span class="lightbox-counter" id="lightbox-counter"></span><button class="icon-button" id="close-image-dialog" aria-label="Fermer l’image">×</button></div>
+    <button class="lightbox-arrow lightbox-prev" id="lightbox-prev" aria-label="Image précédente">‹</button>
+    <figure><img id="lightbox-image" alt=""><figcaption id="lightbox-caption"></figcaption></figure>
+    <button class="lightbox-arrow lightbox-next" id="lightbox-next" aria-label="Image suivante">›</button>
+  </dialog>
+  <dialog class="admin-dialog" id="admin-dialog">
+    <div class="dialog-head"><div><span class="section-kicker">ESPACE PRIVÉ</span><h2>Console admin</h2></div><button class="icon-button" id="close-admin" aria-label="Fermer">×</button></div>
+    <div id="admin-login"><p class="dialog-hint">Connectez-vous pour gérer les compétences affichées sur le portfolio.</p><form id="login-form"><label for="admin-password">Mot de passe administrateur</label><input id="admin-password" type="password" autocomplete="current-password" required placeholder="Votre mot de passe"><p class="login-error" id="login-error"></p><button class="button button-primary full-button">Accéder à l’espace admin <span>→</span></button></form><p class="security-note">Site statique : les données restent dans ce navigateur. Changez le mot de passe dans <code>app.js</code> avant publication.</p></div>
+    <div id="admin-panel" hidden>
+      <div class="admin-summary"><span><b id="admin-skill-total">0</b> compétences</span><button class="button button-primary compact" id="add-skill">＋ Ajouter une compétence</button></div>
+      <div class="admin-list" id="admin-list"></div>
+      <div class="admin-tools"><button class="button button-quiet" id="export-data">↓ Exporter la sauvegarde</button><label class="button button-quiet import-label">↑ Importer une sauvegarde<input id="import-data" type="file" accept=".json,application/json" hidden></label></div>
+      <button class="logout-button" id="logout-admin">Se déconnecter</button>
+      <form id="skill-form" class="skill-form" hidden><h3 id="skill-form-title">Ajouter une compétence</h3><input type="hidden" id="skill-id"><label for="skill-title">Nom de la compétence</label><input id="skill-title" required maxlength="70" placeholder="Ex. Déploiement de serveurs VPS"><label for="skill-category">Catégorie</label><select id="skill-category"><option>Développement</option><option>Infrastructure</option><option>Produits digitaux</option><option>Gestion & outils</option><option>Autre</option></select><label for="skill-description">Description courte</label><textarea id="skill-description" rows="3" maxlength="200" placeholder="Ce que vous savez faire…"></textarea><div class="form-buttons"><button class="button button-primary">Enregistrer <span>✓</span></button><button type="button" class="button button-quiet" id="cancel-skill">Annuler</button></div></form>
+    </div>
+  </dialog>
+  <script src="app.js"></script>
 </body>
 </html>

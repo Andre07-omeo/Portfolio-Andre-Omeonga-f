@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 388 78" role="img" aria-labelledby="title">
+  <title id="title">Nova Digital Congo — technologie locale</title>
+  <defs>
+    <linearGradient id="novaBlue" x1="8" y1="4" x2="59" y2="61" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0d3d86"/>
+      <stop offset=".58" stop-color="#126de0"/>
+      <stop offset="1" stop-color="#16a8ed"/>
+    </linearGradient>
+    <linearGradient id="novaBeam" x1="15" y1="50" x2="51" y2="14" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8deaff"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <rect x="3" y="7" width="64" height="64" rx="20" fill="url(#novaBlue)"/>
+    <rect x="3.8" y="7.8" width="62.4" height="62.4" rx="19.2" fill="none" stroke="#fff" stroke-opacity=".24" stroke-width="1.6"/>
+    <path d="M21 54V23l28 29V23" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/>
+    <path d="m18.5 58 36-38" fill="none" stroke="url(#novaBeam)" stroke-linecap="round" stroke-width="2.7"/>
+    <circle cx="54.7" cy="19.5" r="3.5" fill="#a5f3ff"/>
+  </g>
+  <text x="82" y="40" font-family="DM Sans,Arial,sans-serif" font-size="30" font-weight="800" letter-spacing="1.25" fill="#102442">NOVA</text>
+  <text x="181" y="40" font-family="DM Sans,Arial,sans-serif" font-size="30" font-weight="800" letter-spacing="1.25" fill="#176de0">DIGITAL</text>
+  <text x="84" y="58" font-family="DM Sans,Arial,sans-serif" font-size="9.5" font-weight="700" letter-spacing="2.1" fill="#71839e">CONGO · TECHNOLOGIE LOCALE</text>
+</svg>
